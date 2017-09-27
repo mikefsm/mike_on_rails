@@ -1,6 +1,7 @@
 /***** Body *****/
 body {
   min-height: 2000px;
+  background: black !important;
 }
 
 /***** Flashes *****/
@@ -83,6 +84,6 @@ body {
 }
 
 /***** Cards *****/
-.card {
+.container .card {
   margin-bottom: 10px;
 }
