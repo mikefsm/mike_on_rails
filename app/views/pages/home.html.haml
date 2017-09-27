@@ -13,8 +13,15 @@
             %small.em= time_ago_in_words(@posts.first.created_at)
         .card-body
           %p= @posts.first.body
-
-.container-fluid
+  .social-media-icons
+   
+    %a{ href: '//www.instagram.com', target: 'blank' }
+      %i.fa.fa-instagram
+    %a{ href: '//www.facebook.com', target: 'blank' }
+      %i.fa.fa-facebook-square
+    %a{ href: '//www.twitter.com', target: 'blank' }
+      %i.fa.fa-twitter-square
+.container
   = link_to 'Add Post', new_post_path, class: 'btn btn-sm btn-outline-dark' if !current_user.nil?
 
   - if @posts.any?

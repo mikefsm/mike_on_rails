@@ -1,10 +1,11 @@
-- if notice 
-  .alert.alert-success.alert-dismissible.fade.show
-    %button{ type: 'button', class: 'close', 'data-dismiss' => "alert", 'aria-label' => "Close" }
-      %span{ 'aria-hidden' => 'true' } &times;
-    %p= notice
-- if alert 
-  .alert.alert-danger.alert-dismissible.fade.show
-    %button{ type: 'button', class: 'close', 'data-dismiss' => "alert", 'aria-label' => "Close" }
-      %span{ 'aria-hidden' => 'true' } &times;
-    %p= alert
+.flashes
+  - if notice 
+    .alert.alert-success.alert-dismissible.fade.show
+      %button{ type: 'button', class: 'close', 'data-dismiss' => "alert", 'aria-label' => "Close" }
+        %span{ 'aria-hidden' => 'true' } &times;
+      %p= notice
+  - if alert 
+    .alert.alert-danger.alert-dismissible.fade.show
+      %button{ type: 'button', class: 'close', 'data-dismiss' => "alert", 'aria-label' => "Close" }
+        %span{ 'aria-hidden' => 'true' } &times;
+      %p= alert

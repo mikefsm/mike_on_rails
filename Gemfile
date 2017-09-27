@@ -38,6 +38,7 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'devise'
 gem 'jquery-rails'
 gem 'popper_js', '~> 1.11.1'
+gem "font-awesome-rails"
 
 
 group :development, :test do

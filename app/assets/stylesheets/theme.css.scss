@@ -3,6 +3,16 @@ body {
   min-height: 2000px;
 }
 
+/***** Flashes *****/
+.flashes {
+  margin-left: 15%;
+  margin-right: 15%;
+  width: 70%;
+  position: fixed;
+  top: 40px;
+  z-index: 999999;
+}
+
 /***** Main Header Image *****/
 .site-header {
   height: 400px;
@@ -41,6 +51,19 @@ body {
       }
     }
   }
+  .social-media-icons {
+    z-index: 100;
+    position: absolute;
+    right: 10%;
+    top: 340px;
+    font-size: 2.5em;
+    a {
+      color: white;
+    }
+    a:hover {
+      color: red;
+    }
+  }
 }
 
 
@@ -57,4 +80,9 @@ body {
   a:hover {
     color: red;
   }
+}
+
+/***** Cards *****/
+.card {
+  margin-bottom: 10px;
 }
