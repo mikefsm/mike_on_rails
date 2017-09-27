@@ -4,14 +4,15 @@
     %h1 Mike
     %h1 On
     %h1 Rails
-  .latest_post.col-5
-    .card
-      .card-header
-        %h4
-          = @posts.first.title
-          %small.em= time_ago_in_words(@posts.first.created_at)
-      .card-body
-        %p= @posts.first.body
+  - if @posts.any?
+    .latest_post.col-5
+      .card
+        .card-header
+          %h4
+            = @posts.first.title
+            %small.em= time_ago_in_words(@posts.first.created_at)
+        .card-body
+          %p= @posts.first.body
 
 .container-fluid
   = link_to 'Add Post', new_post_path, class: 'btn btn-sm btn-outline-dark' if !current_user.nil?
