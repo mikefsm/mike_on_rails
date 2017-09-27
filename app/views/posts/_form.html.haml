@@ -1,0 +1,9 @@
+= form_for @post do |f|
+  = f.label :title
+  = f.text_field :title
+
+  = f.label :body
+  = f.text_area :body
+
+
+  = submit_tag button_title, class: 'btn btn-primary'

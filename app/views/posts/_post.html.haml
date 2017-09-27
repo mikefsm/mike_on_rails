@@ -1,0 +1,13 @@
+.card
+  .card-header
+    = link_to post.title, post_path(post)
+    %small
+      = time_ago_in_words(post.created_at)
+      ago
+      by
+      = post&.user&.email || 'anonymous'
+  .card-body
+    %p= post.body
+  - if !current_user.nil?
+    .card-footer
+      = link_to 'Edit', edit_post_path(post) 

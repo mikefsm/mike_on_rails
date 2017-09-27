@@ -1,0 +1,11 @@
+%ul.nav.justify-content-center
+  %li.nav-item
+    = link_to 'Home', root_url, class: 'nav-link'
+  %li.nav-item
+    = link_to 'Blog', posts_path, class: 'nav-link'
+  - if current_user.nil?
+    %li.nav-item
+      = link_to 'Sign in', new_user_session_path, class: 'nav-link'
+  - else
+    %li.nav-item
+      = link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link'

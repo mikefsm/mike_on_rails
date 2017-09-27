@@ -1,0 +1,21 @@
+.site-header
+  = image_tag 'ruby_bg.png', class: 'header-image'
+  .site-name.col-3
+    %h1 Mike
+    %h1 On
+    %h1 Rails
+  .latest_post.col-5
+    .card
+      .card-header
+        %h4
+          = @posts.first.title
+          %small.em= time_ago_in_words(@posts.first.created_at)
+      .card-body
+        %p= @posts.first.body
+
+.container-fluid
+  = link_to 'Add Post', new_post_path, class: 'btn btn-sm btn-outline-dark' if !current_user.nil?
+
+  - if @posts.any?
+    - @posts.each do |post|
+      = render post, locals: { post: post }

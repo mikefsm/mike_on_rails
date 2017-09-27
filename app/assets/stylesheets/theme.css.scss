@@ -1,0 +1,60 @@
+/***** Body *****/
+body {
+  min-height: 2000px;
+}
+
+/***** Main Header Image *****/
+.site-header {
+  height: 400px;
+  width: 100%;
+  position:relative;
+  margin-bottom: 10px;
+  .header-image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .site-name {
+    z-index: 100;
+    position: absolute;    
+    color: white;
+    left: 15%;
+    top: 100px;
+    h1 {
+      background: rgba(0,0,0,0.6);
+      color: white;
+      padding: 8px;
+    }
+  }
+  .latest_post {
+    z-index: 100;
+    position: absolute;
+    right: 15%;
+    top: 100px;
+    .card {
+      background: rgba(0,0,0,0.6);
+      color: white;
+      .card-header {
+        background: rgba(0,0,0,0.2)
+      }
+    }
+  }
+}
+
+
+/***** Nav *****/
+.nav {
+  position: fixed;
+  top: 0;
+  background: rgba(0,0,0,0.4);
+  width: 100%;
+  z-index: 9999;
+  a {
+    color: white;
+  }
+  a:hover {
+    color: red;
+  }
+}
