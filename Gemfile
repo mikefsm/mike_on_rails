@@ -18,6 +18,7 @@ gem 'pg', '~> 0.18'
 gem 'popper_js', '~> 1.11.1'
 gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1.3'
+gem 'rails_12factor', group: :production
 gem 'sass-rails', '~> 5.0'
 gem 'sitemap_generator'
 gem 'turbolinks', '~> 5'
