@@ -3,6 +3,8 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.order(created_at: :desc)
+    @meta_title = meta_title 'Learning Rails One Small Step at a Time'
+    @meta_description = 'Applying the Kaizen method of small steps to learning Ruby on Rails, Javascript, and more!'
   end
 
   def new
@@ -32,16 +34,18 @@ class PostsController < ApplicationController
   end
 
   def show
+    @meta_title = meta_title @post.title
+    @meta_description = @post.meta_description
   end
 
   private
 
   def get_post
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
   end
 
   def post_params
-    params.require(:post).permit(:title, :body, :user)
+    params.require(:post).permit(:title, :body, :meta_description)
   end
 
 

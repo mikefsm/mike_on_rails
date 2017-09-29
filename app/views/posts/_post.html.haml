@@ -1,6 +1,6 @@
 .card
   .card-header
-    = link_to post.title, post_path(post)
+    %h1= link_to post.title, post_path(post)
     %small
       = time_ago_in_words(post.created_at)
       ago

@@ -15,11 +15,11 @@
           %p= @posts.first.body
   .social-media-icons
    
-    %a{ href: '//www.instagram.com', target: 'blank' }
+    %a{ href: '//www.instagram.com', target: 'blank', rel: 'nofollow' }
       %i.fa.fa-instagram
-    %a{ href: FACEBOOK_URL, target: 'blank' }
+    %a{ href: FACEBOOK_URL, target: 'blank', rel: 'nofollow' }
       %i.fa.fa-facebook-square
-    %a{ href: '//www.twitter.com', target: 'blank' }
+    %a{ href: '//www.twitter.com', target: 'blank', rel: 'nofollow' }
       %i.fa.fa-twitter-square
 .container
   = link_to 'Add Post', new_post_path, class: 'btn btn-sm btn-outline-dark' if !current_user.nil?
