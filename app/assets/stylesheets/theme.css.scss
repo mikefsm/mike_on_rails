@@ -1,7 +1,9 @@
 /***** Body *****/
 body {
-  min-height: 2000px;
-  background: black !important;
+  position: relative;
+  padding-bottom: 300px;
+  min-height: 100%;
+  background-image: url(ruby_bg.png);
 }
 
 /***** Flashes *****/
