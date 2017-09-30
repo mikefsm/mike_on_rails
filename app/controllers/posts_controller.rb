@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :get_post, only: [:edit, :update, :show]
+  before_action :get_post, only: [:edit, :update, :show, :destroy]
 
   def index
     @posts = Post.all.order(created_at: :desc)
@@ -36,6 +36,12 @@ class PostsController < ApplicationController
   def show
     @meta_title = meta_title @post.title
     @meta_description = @post.meta_description
+  end
+
+  def destroy
+    @post.destroy
+    flash[:notice] = "#{@post.title} Deleted"
+    redirect_to posts_path
   end
 
   private
