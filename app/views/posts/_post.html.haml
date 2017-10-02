@@ -8,7 +8,7 @@
       = post&.user&.email || 'anonymous'
   .card-body
     %p= post.body
-  - if current_user.admin?
+  - if current_user&.admin?
     .card-footer
       = link_to 'Edit', edit_post_path(post) 
       = link_to "Delete", post, class: 'cancel-link', method: :delete
