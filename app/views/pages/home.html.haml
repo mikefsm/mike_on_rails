@@ -21,7 +21,6 @@
     %a{ href: '//www.twitter.com', target: 'blank', rel: 'nofollow' }
       %i.fa.fa-twitter-square
 .container
-  = link_to 'Add Post', new_post_path, class: 'btn btn-sm btn-outline-dark' if !current_user.nil?
 
   - if @posts.any?
     - @posts.each do |post|
