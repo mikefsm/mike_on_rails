@@ -11,6 +11,7 @@
 #   t.inet :last_sign_in_ip
 #   t.datetime :created_at, null: false
 #   t.datetime :updated_at, null: false
+#   t.integer :role
 #   t.index [:email], name: :index_users_on_email, unique: true
 #   t.index [:reset_password_token], name: :index_users_on_reset_password_token, unique: true
 # end
@@ -22,4 +23,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :posts
+
+  enum role: [:reader, :admin]
+
 end
