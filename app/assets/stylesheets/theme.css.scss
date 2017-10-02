@@ -6,6 +6,16 @@ body {
   background-image: image-url("ruby_bg.png");
 }
 
+.container-fluid {
+  margin-top: 45px;
+}
+
+/***** Typography *****/
+.container-fluid h1 {
+  font-size: 2em;
+  color: white;
+}
+
 /***** Flashes *****/
 .flashes {
   margin-left: 15%;

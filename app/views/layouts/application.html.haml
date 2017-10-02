@@ -19,6 +19,7 @@
   %body
     = render partial: 'layouts/nav'
     = render partial: 'layouts/flashes'
-    = yield
+    .container-fluid
+      = yield
 
     = render partial: 'layouts/footer'
