@@ -11,6 +11,9 @@ body {
 }
 
 /***** Typography *****/
+label {
+  color: white;
+}
 .container-fluid h1 {
   font-size: 2em;
   color: white;
@@ -79,7 +82,15 @@ body {
   }
 }
 
+/***** Forms *****/
+.large-textarea {
+  min-height: 300px;
+}
 
+/***** Buttons *****/
+.btn-outline-light:hover {
+  color: black !important;
+}
 /***** Nav *****/
 .nav {
   position: fixed;

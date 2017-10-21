@@ -1,12 +1,16 @@
-= form_for @post do |f|
-  = f.label :title
-  = f.text_field :title
+.col-12
+  = form_for @post do |f|
+    .form-group
+      = f.label :title
+      = f.text_field :title, class: 'form-control'
 
-  = f.label :body
-  = f.text_area :body
+    .form-group
+      = f.label :body
+      = f.text_area :body, class: 'form-control large-textarea'
 
-  = f.label :meta_description
-  = f.text_area :meta_description
+    .form-group
+      = f.label :meta_description
+      = f.text_area :meta_description, class: 'form-control'
 
 
-  = submit_tag button_title, class: 'btn btn-primary'
+    = submit_tag button_title, class: 'btn btn-sm btn-outline-light'
